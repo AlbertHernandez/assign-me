@@ -15,5 +15,4 @@ export const assignUsers = async (tools, users) => {
         `Error happens when we were assigning the users [${users.join(', ')}] to the pull request: ${error}`,
     );
   }
-
 };
