@@ -1,4 +1,4 @@
-const assignUsers = require('./github/assign-users');
+const { assignUsers } = require('./github');
 
 module.exports = async tools => {
     const { actor } = tools.context;
