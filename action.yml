@@ -1,0 +1,8 @@
+name: Assign Me
+description: Automatically adds you to the assignees in the pull request
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: user
+  color: red
