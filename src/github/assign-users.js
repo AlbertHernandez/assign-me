@@ -3,7 +3,7 @@
  * @param {import('actions-toolkit').Toolkit} tools
  * @param {string[]} users
  */
-export const assignUsers = async (tools, users) => {
+module.exports = async (tools, users) => {
   try {
     await tools.github.issues.addAssignees({
       ...tools.context.repo,
