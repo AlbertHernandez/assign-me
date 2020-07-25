@@ -1,3 +1,5 @@
+const assignUsers = require('./github/assign-users');
+
 module.exports = async tools => {
-  // Todo
+    await assignUsers(tools, ['AlbertHernandez']);
 };
