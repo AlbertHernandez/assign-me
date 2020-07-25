@@ -6,11 +6,7 @@ const runAction = require('./src/run-action');
 
 Toolkit.run(
   async tools => {
-    tools.log.info('Running the action...');
-
     await runAction(tools);
-
-    tools.log.success('Label successfully applied!');
   },
   {
     event: [
