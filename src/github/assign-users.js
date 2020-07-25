@@ -1,12 +1,19 @@
 /**
  * Assign user
  * @param {import('actions-toolkit').Toolkit} tools
- * @param {string} comment
+ * @param {string[]} users
  */
 module.exports = async (tools, users) => {
-  await tools.github.issues.addAssignees({
-    ...tools.context.repo,
-    issue_number: tools.context.issue.number,
-    assignees: users,
-  });
+  try {
+    await tools.github.issues.addAssignees({
+      ...tools.context.repo,
+      issue_number: tools.context.issue.number,
+      assignees: users,
+    });
+  } catch (error) {
+    tools.log.info(
+        `Error happens when we were assigning the users [${users.join(', ')}] to the pull request: ${error}`,
+    );
+  }
+
 };
