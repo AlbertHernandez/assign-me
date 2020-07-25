@@ -10,7 +10,7 @@ Toolkit.run(
 
     await runAction(tools);
 
-    tools.log.success('Label successfully applied!');
+    tools.log.success('User successfully added!');
   },
   {
     event: [
