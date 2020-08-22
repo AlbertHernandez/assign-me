@@ -10,14 +10,15 @@
 Create the `.github/workflows/assign-me.yml` file:
 
 ```yaml
-name: Automatically adds you to the assignees in the pull request
+
 on: [pull_request]
+
 jobs:
-  assign_me:
-    runs-on: ubuntu-latest
-    name: Label working progress👩🏻‍💻
-    steps:
-      - uses: AlbertHernandez/assign-me@v1
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    assign_me:
+        runs-on: ubuntu-latest
+        name: Assign me
+        steps:
+            - uses: AlbertHernandez/assign-me@v1.0.0
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
